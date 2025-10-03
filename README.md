@@ -1,4 +1,4 @@
-# Hybrid-Retrieval-Augmented-Generation
+# ⛑️ Hybrid-Retrieval-Augmented-Generation
 
 Combine Retrieval-Augmented Generation with Cache-Augmented Generation to improve retrieval efficiency and generation quality.
 
@@ -15,7 +15,7 @@ The goal is to maintain high quality of retrieved content while improving latenc
 
 ---
 
-## Motivation
+## ⚡️ Motivation
 
 - Many systems using RAG repeatedly retrieve the same or very similar documents/contexts, which causes redundant computation.  
 - A cache layer can greatly reduce latency for repeated/similar queries.  
@@ -23,9 +23,9 @@ The goal is to maintain high quality of retrieved content while improving latenc
 
 ---
 
-## Features
+## ✨ Features
 
-- Clean and filter pipeline for text preprocessing  
+- Clean and filter pipeline for text preprocessing
 - Semantic chunk classification (RoBERTa)  
 - Dual storage: embeddings & structured metadata  
 - Hybrid search combining keywords + embedding similarity  
