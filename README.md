@@ -1,32 +1,40 @@
-# ⛑️ Hybrid-Retrieval-Augmented-Generation
+# ⛑️ HyDE-RAG
 
-Combine Retrieval-Augmented Generation with Cache-Augmented Generation to improve retrieval efficiency and generation quality.
+Integrates HyDE-based hypothetical reasoning, Retrieval-Augmented Generation, and Cache-Augmented Generation to improve retrieval precision, reduce latency, and deliver higher-quality responses.
+ 
+----------
+ 
+## 🚀 Overview
 
----
+**HyDE-RAG** combines three complementary mechanisms:
 
-## Overview
+- **HyDE** – Generates hypothetical answers to enrich retrieval signals and improve recall.
+- **RAG** – Retrieves semantically relevant chunks and feeds them into the generator.
+- **CAG** – Caches frequent or semantically similar queries to avoid repeated retrieval and reduce latency.
 
-This project implements a hybrid system combining retrieval-based and cache-based techniques:
+The system balances semantic depth, speed, and efficiency, making it suitable for knowledge-intensive applications and scalable production setups.
 
-- **RAG** for semantic retrieval and generation  
-- **CAG** to cache frequent queries or chunks for faster response and reduced redundancy  
+----------
 
-The goal is to maintain high quality of retrieved content while improving latency and efficiency.
+## 🎯 Motivation
 
----
+- Retrieval systems often process near-duplicate queries, wasting time and compute.
+- Pure RAG struggles with low-signal queries or missing terminology.
+- HyDE enhances retrieval when documents don’t match the phrasing of the query.
+- Caching eliminates redundant work and improves end-to-end latency.
 
-## ⚡️ Motivation
+**HyDE-RAG** merges all three to create a stronger, more adaptive retrieval pipeline.
 
-- Many systems using RAG repeatedly retrieve the same or very similar documents/contexts, which causes redundant computation.  
-- A cache layer can greatly reduce latency for repeated/similar queries.  
-- By combining both, you get semantic richness (via embeddings) + speed (via caching).
+----------
 
----
 
 ## ✨ Features
 
-- Clean and filter pipeline for text preprocessing
-- Semantic chunk classification (RoBERTa)  
-- Dual storage: embeddings & structured metadata  
-- Hybrid search combining keywords + embedding similarity  
-- Modular & extensible for new domains or models
+- HyDE hypothesis generation to enrich retrieval signals
+- Hybrid retrieval combining keyword matching + embedding similarity
+- Cache-Augmented Generation with smart reuse of previous results
+- Semantic chunk classification using RoBERTa
+- Clean text preprocessing pipeline
+- Structured metadata + embedding storage
+- Modular design for plugging in new LLMs, embedding models, or indexes
+- Extensible architecture suitable for research or production
